@@ -11,6 +11,7 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
+  target: "web",
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -18,6 +19,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
