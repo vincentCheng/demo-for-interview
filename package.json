@@ -4,7 +4,7 @@
   "description": "My webpack project",
   "main": "index.js",
   "scripts": {
-    "dev":"webpack serve --hot",
+    "dev": "webpack serve --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
@@ -26,6 +26,7 @@
     "@webpack-cli/generators": "^3.0.1",
     "autoprefixer": "^10.4.14",
     "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.21",

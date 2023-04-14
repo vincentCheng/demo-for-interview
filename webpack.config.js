@@ -12,7 +12,7 @@ const stylesHandler = isProduction
 
 const config = {
   target: "web",
-  entry: "./src/index.ts",
+  entry: path.resolve(__dirname, "./src/index.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -24,6 +24,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
+      inject: "body",
     }),
 
     // Add your plugins here
@@ -31,6 +32,10 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       {
         test: /\.(ts|tsx)$/i,
         loader: "ts-loader",
