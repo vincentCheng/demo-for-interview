@@ -1,0 +1,13 @@
+.content {
+  width: 500px;
+  height: 100px;
+  border: 1px solid blue;
+  margin: 100px auto;
+}
+
+.text {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid green;
+  position: relative;
+}
